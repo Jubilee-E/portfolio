@@ -12,10 +12,12 @@
         <img src="img/logo.png" alt="Логотип" class="logo">
         <nav>
           <ul>
+            <nav>
             <li><a href="#">Обо мне</a></li>
             <li><a href="#">Навыки</a></li>
             <li><a href="#">Интересы</a></li>
             <li><a href="#">Контакты</a></li>
+          </nav>
           </ul>
         </nav>
       </header>
@@ -26,7 +28,7 @@
             <h1>Бодров Артем Романович</h1>
             <p class="subtitle">Инженер</p>
           </div>
-          <img src="img/user-photo.png" alt="Фото А" class="profile-pic">
+          <img src="img/user-photo.png" alt="Фото А" class="profile-pic" width="400" height="400" radius="5000">
         </section>
     
         <section class="about">
@@ -43,10 +45,25 @@
             <button>по названию</button>
             <button>по уровню</button>
           </div>
-          <div class="skill"><span>html</span><div class="bar"><div class="fill" style="width: 95%;"></div></div></div>
-          <div class="skill"><span>css</span><div class="bar"><div class="fill" style="width: 85%;"></div></div></div>
-          <div class="skill"><span>python</span><div class="bar"><div class="fill" style="width: 75%;"></div></div></div>
-          <div class="skill"><span>c++</span><div class="bar"><div class="fill" style="width: 65%;"></div></div></div>
+
+        <dl>
+          <dt><img src="img/icon.png" alt="Фото HTML" class="slill-pic" width="30" height="30"> html</dt>
+            <dd>
+                <div style="width: 40%;">40%</div>
+            </dd>
+            <dt> <img src="img/icon1.png" alt="Фото CSS" class="slill-pic" width="30" height="30">css</dt>
+            <dd>
+                <div style="width: 40%;">40%</div>
+            </dd>
+            <dt><img src="img/icon2.png" alt="Фото python" class="slill-pic" width="30" height="30"> python</dt>
+            <dd>
+                <div style="width: 40%;">40%</div>
+            </dd>
+            <dt><img src="img/icon3.png" alt="Фото c++" class="slill-pic" width="30" height="30"> c++</dt>
+            <dd>
+                <div style="width: 40%;">40%</div>
+            </dd>
+        </dl>
         </section>
     
         <section class="interests">
@@ -57,12 +74,12 @@
     
         <section class="contacts">
           <h2>Мои контакты</h2>
-          <p><i class="fas fa-phone"></i> +7 926 230-01-51</p>
-          <p><i class="fas fa-envelope"></i> artem-bodrov1408@yandex.ru</p>
+          <ul><p><i  class="phone"></i><img src="img/ContactsIcon2.png" alt="Фото Телефона" class="phone" width="30" height="30"> +7 926 230-01-51</p>
+          <p><i class="envelope"><img src="img/ContactsIcon1.png" alt="Фото Почты" class="envelope" width="30" height="30"></i> artem-bodrov1408@yandex.ru</p></ul>
           <div class="socials">
-            <i class="fab fa-github"></i>
-            <i class="fab fa-vk"></i>
-            <i class="fab fa-telegram"></i>
+          <ul><i class="github"><img src="img/SocialButton.png" alt="Фото github" class="github" width="30" height="30"></i>
+            <i class="vk"><img src="img/SocialButton-1.png" alt="Фото vk" class="vk" width="30" height="30"></i>
+            <i class="telegram"><img src="img/SocialButton-2.png" alt="Фото telegram" class="telegram" width="30" height="30"></i></ul>
           </div>
         </section>
       </main>
