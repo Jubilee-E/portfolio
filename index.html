@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Проект создания собственного сайта">
     <title>Сайт начинающего верстальщика</title>
+    <link rel="logo" type="image/svg" href="img/logo.svg">
     <link rel="stylesheet" href="outlines.css">
 </head>
 <body>
@@ -12,10 +13,10 @@
         <img src="img/logo.png" alt="Логотип" class="logo">
         <nav>
           <ul>
-            <li><a href="#">Обо мне</a></li>
-            <li><a href="#">Навыки</a></li>
-            <li><a href="#">Интересы</a></li>
-            <li><a href="#">Контакты</a></li>
+            <li><a href="#about">Обо мне</a></li>
+            <li><a href="#skills">Навыки</a></li>
+            <li><a href="#interests">Интересы</a></li>
+            <li><a href="#contacts">Контакты</a></li>
           </ul>
         </nav>
       </header>
@@ -30,7 +31,7 @@
         </section>
     
         <section class="about">
-          <h2>Пара слов обо мне</h2>
+          <h2 id="about"> Пара слов обо мне</h2>
           <p>Привет 👋</p>
           <p>В данный момент я учусь в магистратуре МФ МГТУ им. Н. Э. Баумана по направлению «Информатика и вычислительная техника».</p>
           <p>В прошлом году защитил диплом бакалавра на тему «Разработка модуля специального программного обеспечения управления и мониторинга серверов комплекса индивидуальных средств отображений». Работа была высоко оценена комиссией.</p>
@@ -38,7 +39,7 @@
         </section>
     
         <section class="skills">
-          <h2>Мои навыки</h2>
+          <h2 id="skills">Мои навыки</h2>
           <div class="sort-buttons">
             <button>по названию</button>
             <button>по уровню</button>
@@ -47,43 +48,44 @@
         <dl>
           <dt><img src="img/Icon.png" alt="Фото HTML" class="slill-pic" width="30" height="30"> html</dt>
             <dd>
-                <div style="width: 40%;">40%</div>
+                <div style="width: 30%;">30%</div>
             </dd>
             <dt> <img src="img/Icon1.png" alt="Фото CSS" class="slill-pic" width="30" height="30">css</dt>
             <dd>
-                <div style="width: 40%;">40%</div>
+                <div style="width: 10%;">10%</div>
             </dd>
             <dt><img src="img/Icon2.png" alt="Фото python" class="slill-pic" width="30" height="30"> python</dt>
             <dd>
-                <div style="width: 40%;">40%</div>
+                <div style="width: 45%;">45%</div>
             </dd>
             <dt><img src="img/Icon3.png" alt="Фото c++" class="slill-pic" width="30" height="30"> c++</dt>
             <dd>
-                <div style="width: 40%;">40%</div>
+                <div style="width: 50%;">50%</div>
             </dd>
         </dl>
         </section>
     
         <section class="interests">
-          <h2>Мои интересы</h2>
+          <h2 id="interests"> Мои интересы</h2>
           <p>Наибольший интерес для меня в данный момент представляет программирование и изучение искусственного интеллекта.</p>
           <p>Но помимо учёбы и работы я также люблю играть в компьютерные игры.</p>
         </section>
     
         <section class="contacts">
-          <h2>Мои контакты</h2>
+          <h2 id="contacts">Мои контакты</h2>
           <ul>
-            <li><img src="img/ContactsIcon2.png" alt="Телефон" width="30"> +7 926 230-01-51</li>
-            <li><img src="img/ContactsIcon1.png" alt="Почта" width="30"> artem-bodrov1408@yandex.ru</li>
+            <li><img src="img/ContactsIcon2.png" alt="Телефон" width="30"> +7 926 230-01-51
+              <a href="tel:+79262300151">+7 926 230-01-51</a></li>
+            <li><img src="img/ContactsIcon1.png" alt="Почта" width="30"> artem-bodrov1408@yandex.ru
+              <a href="mailto:artem-bodrov1408@yandex.ru">artem-bodrov1408@yandex.ru</a></li>
           </ul>
           
           <ul class="socials">
-            <li><img src="img/SocialButton.png" alt="GitHub" width="30"></li>
-            <li><img src="img/SocialButton-1.png" alt="VK" width="30"></li>
-            <li><img src="img/SocialButton-2.png" alt="Telegram" width="30"></li>
+            <li><a href="https://github.com/Jubilee-E">GitHub</a> <img src="img/SocialButton.png" alt="GitHub" width="30"></li>
+            <li><a href="https://vk.com/artembodrovrom">VK</a><img src="img/SocialButton-1.png" alt="VK" width="30"></li>
+            <li><a href="https://t.me/BoArRom">Telegram</a><img src="img/SocialButton-2.png" alt="Telegram" width="30"></li>
           </ul>
           
-          </div>
         </section>
       </main>
     
