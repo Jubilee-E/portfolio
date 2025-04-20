@@ -5,16 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Проект создания собственного сайта">
     <title>Сайт начинающего верстальщика</title>
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <link rel="stylesheet" href="outlines.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="css/outlines.css">
+
 </head>
 <body>
     <header>
-        <img src="img/logo.png" alt="Логотип" class="logo">
+        <img src="img/logo.svg" alt="Логотип" class="logo">
         <nav>
           <ul>
             <li><a href="#about">Обо мне</a></li>
@@ -49,24 +48,16 @@
             <button>по уровню</button>
           </div>
 
-        <dl>
-          <dt><img src="img/Icon.png" alt="Фото HTML" class="slill-pic" width="30" height="30"> html</dt>
-            <dd>
-                <div style="width: 30%;">30%</div>
-            </dd>
-            <dt> <img src="img/Icon1.png" alt="Фото CSS" class="slill-pic" width="30" height="30">css</dt>
-            <dd>
-                <div style="width: 10%;">10%</div>
-            </dd>
-            <dt><img src="img/Icon2.png" alt="Фото python" class="slill-pic" width="30" height="30"> python</dt>
-            <dd>
-                <div style="width: 45%;">45%</div>
-            </dd>
-            <dt><img src="img/Icon3.png" alt="Фото c++" class="slill-pic" width="30" height="30"> c++</dt>
-            <dd>
-                <div style="width: 50%;">50%</div>
-            </dd>
-        </dl>
+           <dl>
+                <dt class="icon-html">html</dt>
+                <dd><div style="width: 30%;">30%</div></dd>
+                <dt class="icon-css">css</dt>
+                <dd><div style="width: 10%;">10%</div></dd>
+                <dt class="icon-python">python</dt>
+                <dd><div style="width: 45%;">45%</div></dd>
+                <dt class="icon-cpp">c++</dt>
+                <dd><div style="width: 50%;">50%</div></dd>
+            </dl>
         </section>
     
         <section class="interests">
@@ -77,18 +68,15 @@
     
         <section class="contacts">
           <h2 id="contacts">Мои контакты</h2>
-          <ul>
-            <li><img src="img/ContactsIcon2.png" alt="Телефон" width="30"> +7 926 230-01-51
-              <a href="tel:+79262300151">+7 926 230-01-51</a></li>
-            <li><img src="img/ContactsIcon1.png" alt="Почта" width="30"> artem-bodrov1408@yandex.ru
-              <a href="mailto:artem-bodrov1408@yandex.ru">artem-bodrov1408@yandex.ru</a></li>
-          </ul>
+            <p><span class="icon-phone"></span> <a href="tel:+79262300151">+7 926 230-01-51</a></p>
+            <p><span class="icon-mail"></span> <a href="mailto:artem-bodrov1408@yandex.ru">artem-bodrov1408@yandex.ru</a></p>
+
           
-          <ul class="socials">
-            <li><a href="https://github.com/Jubilee-E">GitHub</a> <img src="img/SocialButton.png" alt="GitHub" width="30"></li>
-            <li><a href="https://vk.com/artembodrovrom">VK</a><img src="img/SocialButton-1.png" alt="VK" width="30"></li>
-            <li><a href="https://t.me/BoArRom">Telegram</a><img src="img/SocialButton-2.png" alt="Telegram" width="30"></li>
-          </ul>
+            <div class="socials">
+              <a href="https://github.com/Jubilee-E" class="icon-github">GitHub</a>
+              <a href="https://vk.com/artembodrovrom" class="icon-vk">VK</a>
+              <a href="https://t.me/BoArRom" class="icon-telegram">Telegram</a>
+          </div>
           
         </section>
       </main>
