@@ -1,97 +1,88 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Проект создания собственного сайта">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Проект создания собственного сайта" />
   <title>Сайт начинающего верстальщика</title>
-  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="stylesheet" href="css/outlines.css">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <header>
-    <img src="img/logo.svg" alt="Логотип" class="logo">
-    <nav>
-      <a href="#about">Обо мне</a>
-      <a href="#skills">Навыки</a>
-      <a href="#interests">Интересы</a>
-      <a href="#contacts">Контакты</a>
-    </nav>
-  </header>
+  <div class="container">
+    <header class="header">
+      <img src="img/logo.svg" alt="Логотип" class="header__logo" />
+      <nav class="header__nav">
+        <a href="#about" class="header__link">Обо мне</a>
+        <a href="#skills" class="header__link">Навыки</a>
+        <a href="#interests" class="header__link">Интересы</a>
+        <a href="#contacts" class="header__link">Контакты</a>
+      </nav>
+    </header>
 
-  <main>
-    <section class="intro" id="intro">
-      <div class="intro-text">
-        <h1>Бодров Артем Романович</h1>
-        <p class="subtitle">Инженер</p>
-      </div>
-      <img src="img/user-photo.png" alt="Фото А" class="profile-pic" width="400" height="400">
-    </section>
+    <main>
+      <section class="intro" id="intro">
+        <div class="intro__text">
+          <h1 class="intro__title">Бодров Артем Романович</h1>
+          <p class="intro__subtitle">Инженер</p>
+        </div>
+        <img src="img/user-photo.png" alt="Фото А" class="intro__photo" width="400" height="400" />
+      </section>
 
-    <section class="about" id="about">
-      <h2>Пара слов обо мне</h2>
-      <p>Привет 👋</p>
-      <p>В данный момент я учусь в магистратуре МФ МГТУ им. Н. Э. Баумана по направлению «Информатика и вычислительная
-        техника».</p>
-      <p>В прошлом году защитил диплом бакалавра на тему «Разработка модуля специального программного обеспечения
-        управления и мониторинга серверов комплекса индивидуальных средств отображений». Работа была высоко оценена
-        комиссией.</p>
-      <p>Я на данный момент работаю инженером в Центре управления Полётами.</p>
-    </section>
+      <section class="about" id="about">
+        <h2 class="about__title">Пара слов обо мне</h2>
+        <p>Привет 👋</p>
+        <p>Я учусь в магистратуре МГТУ им. Н. Э. Баумана на направлении «Информатика и вычислительная техника».</p>
+        <p>В прошлом году защитил диплом бакалавра на тему программного комплекса для мониторинга серверов. Работа была высоко оценена.</p>
+        <p>Сейчас я работаю инженером в Центре управления полётами.</p>
+      </section>
 
-    <section class="skills" id="skills">
-      <h2>Мои навыки</h2>
-      <div class="sort-buttons">
-        <button>по названию</button>
-        <button>по уровню</button>
-      </div>
+      <section class="skills" id="skills">
+        <h2 class="skills__title">Мои навыки</h2>
+        <div class="skills__sort">
+          <button class="skills__button">по названию</button>
+          <button class="skills__button">по уровню</button>
+        </div>
+        <dl class="skills__list">
+          <dt class="skills__item skills__item--html">html</dt>
+          <dd class="skills__bar"><div style="width: 30%;"></div></dd>
+          <dt class="skills__item skills__item--css">css</dt>
+          <dd class="skills__bar"><div style="width: 10%;"></div></dd>
+          <dt class="skills__item skills__item--python">python</dt>
+          <dd class="skills__bar"><div style="width: 45%;"></div></dd>
+          <dt class="skills__item skills__item--cpp">c++</dt>
+          <dd class="skills__bar"><div style="width: 50%;"></div></dd>
+        </dl>
+      </section>
 
-      <dl>
-        <dt class="icon-html">html</dt>
-        <dd>
-          <div style="width: 30%;">30%</div>
-        </dd>
-        <dt class="icon-css">css</dt>
-        <dd>
-          <div style="width: 10%;">10%</div>
-        </dd>
-        <dt class="icon-python">python</dt>
-        <dd>
-          <div style="width: 45%;">45%</div>
-        </dd>
-        <dt class="icon-cpp">c++</dt>
-        <dd>
-          <div style="width: 50%;">50%</div>
-        </dd>
-      </dl>
-    </section>
+      <section class="interests" id="interests">
+        <h2 class="interests__title">Мои интересы</h2>
+        <p>Интересуюсь программированием и ИИ, люблю компьютерные игры.</p>
+      </section>
 
-    <section class="interests" id="interests">
-      <h2>Мои интересы</h2>
-      <p>Наибольший интерес для меня в данный момент представляет программирование и изучение искусственного интеллекта.
-      </p>
-      <p>Но помимо учёбы и работы я также люблю играть в компьютерные игры.</p>
-    </section>
+      <section class="contacts" id="contacts">
+        <h2 class="contacts__title">Мои контакты</h2>
+        <a href="tel:+79262300151" class="contacts__link contacts__link--phone">+7 926 230-01-51</a>
+        <a href="mailto:artem-bodrov1408@yandex.ru" class="contacts__link contacts__link--mail">artem-bodrov1408@yandex.ru</a>
+        <div class="contacts__socials">
+          <a href="https://github.com/Jubilee-E" class="contacts__social contacts__social--github"><span class="visually-hidden">GitHub</span></a>
+          <a href="https://vk.com/artembodrovrom" class="contacts__social contacts__social--vk"><span class="visually-hidden">VK</span></a>
+          <a href="https://t.me/BoArRom" class="contacts__social contacts__social--telegram"><span class="visually-hidden">Telegram</span></a>
+        </div>
+      </section>
+    </main>
+  </div>
 
-    <section class="contacts" id="contacts">
-      <h2>Мои контакты</h2>
-      <a href="tel:+79262300151" class="icon-phone">+7 926 230-01-51</a><br>
-      <a href="mailto:artem-bodrov1408@yandex.ru" class="icon-mail">artem-bodrov1408@yandex.ru</a>
-
-      <div class="socials">
-        <a href="https://github.com/Jubilee-E" class="icon-github">GitHub</a>
-        <a href="https://vk.com/artembodrovrom" class="icon-vk">VK</a>
-        <a href="https://t.me/BoArRom" class="icon-telegram">Telegram</a>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 БАР</p>
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__text">© 2025 БАР</p>
+    </div>
   </footer>
 </body>
-
 </html>

@@ -1,0 +1,151 @@
+:root {
+  --text-color: #333;
+  --bg-color: #fff;
+  --blue: #0044cc;
+  --yellow: #ffc107;
+  --gray: #f5f5f5;
+  --font-main: 'Open Sans', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header,
+.footer {
+  padding: 20px 0;
+  background-color: var(--gray);
+  text-align: center;
+}
+
+.header__link {
+  margin: 0 10px;
+}
+
+.intro__title {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.intro__subtitle {
+  color: var(--blue);
+  font-size: 20px;
+}
+
+.intro__photo {
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
+.skills__sort {
+  margin: 15px 0;
+}
+
+.skills__button {
+  background-color: var(--gray);
+  padding: 8px 12px;
+  border: none;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.skills__button:hover {
+  background-color: var(--yellow);
+}
+
+.skills__item {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.skills__bar div {
+  background: var(--blue);
+  height: 10px;
+  border-radius: 5px;
+}
+
+.contacts__link {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding-left: 30px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 20px;
+}
+
+.contacts__link--phone {
+  background-image: url("../img/phone.svg");
+}
+
+.contacts__link--mail {
+  background-image: url("../img/mail.svg");
+}
+
+.contacts__socials {
+  margin-top: 10px;
+}
+
+.contacts__social {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.contacts__social--github {
+  background-image: url("../img/github.svg");
+}
+
+.contacts__social--vk {
+  background-image: url("../img/vk.svg");
+}
+
+.contacts__social--telegram {
+  background-image: url("../img/telegram.svg");
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
