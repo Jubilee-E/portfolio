@@ -1,8 +1,8 @@
 :root {
-  --text-color: #333;
-  --bg-color: #fff;
-  --blue: #0044cc;
-  --yellow: #ffc107;
+  --text-color: #1d1d1f;
+  --bg-color: #ffffff;
+  --accent-color: #00b3a4;
+  --light-accent: #e0f7f5;
   --gray: #f5f5f5;
   --font-main: 'Open Sans', sans-serif;
 }
@@ -17,7 +17,7 @@
 
 body {
   font-family: var(--font-main);
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.5;
   color: var(--text-color);
   background-color: var(--bg-color);
@@ -30,39 +30,74 @@ img {
 }
 
 a {
-  color: var(--blue);
+  font-size: 20px;
+  color: var(--accent-color);
   text-decoration: none;
+  line-height: 1;
 }
 
 a:hover {
-  text-decoration: underline;
+  color: var(--accent-color);
 }
 
 .container {
+  max-width: 320px;
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-.header,
-.footer {
-  padding: 20px 0;
-  background-color: var(--gray);
-  text-align: center;
+.header {
+  padding: 30px 0 0;
+  background: none;
+}
+
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.header__logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.header__nav {
+  display: flex;
+  gap: 30px;
 }
 
 .header__link {
-  margin: 0 10px;
+  font-size: 20px;
+  color: var(--text-color);
+  text-decoration: none;
 }
 
+.header__link:hover {
+  color: var(--accent-color);
+}
+
+.footer {
+  padding: 20px 0 60px;
+  background-color: #1d1d1f;
+  text-align: center;
+}
+
+
 .intro__title {
-  font-size: 32px;
-  margin-bottom: 10px;
+  font-size: 60px;
+  line-height: 1.1;
+  font-weight: 700;
 }
 
 .intro__subtitle {
-  color: var(--blue);
-  font-size: 20px;
+  font-size: 38px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: var(--accent-color);
+  margin-bottom: 20px;
 }
 
 .intro__photo {
@@ -70,40 +105,82 @@ a:hover {
   margin-top: 20px;
 }
 
+.skills__title,
+.about__title,
+.interests__title,
+.contacts__title {
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 700;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
 .skills__sort {
-  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+.skills__sort::before {
+  margin-right: 10px;
+  color: var(--text-color);
 }
 
 .skills__button {
-  background-color: var(--gray);
-  padding: 8px 12px;
-  border: none;
-  margin-right: 10px;
+  background-color: transparent;
+  padding: 8px 14px;
+  border: 2px solid var(--accent-color);
+  font-size: 18px;
+  border-radius: 6px;
   cursor: pointer;
+  color: var(--accent-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .skills__button:hover {
-  background-color: var(--yellow);
+  background-color: var(--accent-color);
+  color: #fff;
+}
+
+.skills__list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
 
 .skills__item {
-  margin-top: 10px;
   font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.skills__bar {
+  background-color: #ffffff;
+  border: 1px solid #b5b5b5;
+  border-radius: 999px;
+  height: 12px;
+  overflow: hidden;
 }
 
 .skills__bar div {
-  background: var(--blue);
-  height: 10px;
-  border-radius: 5px;
+  background: var(--accent-color);
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.3s ease;
 }
 
 .contacts__link {
   display: inline-block;
-  margin-bottom: 10px;
+  margin: 10px 20px 20px 0;
   padding-left: 30px;
   background-repeat: no-repeat;
   background-position: left center;
   background-size: 20px;
+  color: var(--text-color);
+  transition: color 0.2s ease;
 }
 
 .contacts__link--phone {
@@ -114,19 +191,28 @@ a:hover {
   background-image: url("../img/mail.svg");
 }
 
+.contacts__link:hover {
+  color: var(--accent-color);
+}
+
 .contacts__socials {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .contacts__social {
+  width: 48px;
+  height: 48px;
   display: inline-block;
-  width: 40px;
-  height: 40px;
-  margin-right: 10px;
+  border: 1px solid var(--accent-color);
   border-radius: 50%;
-  background-size: cover;
+  background-size: 60%;
   background-position: center;
   background-repeat: no-repeat;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.contacts__social:hover {
+  background-color: var(--accent-color);
 }
 
 .contacts__social--github {
@@ -148,4 +234,42 @@ a:hover {
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
   white-space: nowrap;
+}
+
+.footer__text {
+  font-size: 14px;
+  color: #777;
+  margin-top: 20px;
+}
+
+.contacts__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 20px 20px 0;
+  padding-left: 30px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 20px;
+  color: var(--text-color);
+  transition: color 0.2s ease;
+}
+
+.contacts__link--phone {
+  background-image: url("../img/phone.svg");
+}
+
+.contacts__link--mail {
+  background-image: url("../img/mail.svg");
+}
+
+.contacts__link:hover {
+  color: var(--accent-color);
+}
+
+.contacts__socials {
+  margin-top: 20px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
 }

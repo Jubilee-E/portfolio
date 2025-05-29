@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,19 +12,22 @@
   <link rel="stylesheet" href="css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
   <div class="container">
     <header class="header">
-      <img src="img/logo.svg" alt="Логотип" class="header__logo" />
-      <nav class="header__nav">
-        <a href="#about" class="header__link">Обо мне</a>
-        <a href="#skills" class="header__link">Навыки</a>
-        <a href="#interests" class="header__link">Интересы</a>
-        <a href="#contacts" class="header__link">Контакты</a>
-      </nav>
+      <div class="header__wrapper">
+        <img src="img/logo.svg" alt="Логотип" class="header__logo" />
+        <nav class="header__nav">
+          <a href="#about" class="header__link">Обо мне</a>
+          <a href="#skills" class="header__link">Навыки</a>
+          <a href="#interests" class="header__link">Интересы</a>
+          <a href="#contacts" class="header__link">Контакты</a>
+        </nav>
+      </div>
     </header>
 
     <main>
@@ -39,25 +43,38 @@
         <h2 class="about__title">Пара слов обо мне</h2>
         <p>Привет 👋</p>
         <p>Я учусь в магистратуре МГТУ им. Н. Э. Баумана на направлении «Информатика и вычислительная техника».</p>
-        <p>В прошлом году защитил диплом бакалавра на тему программного комплекса для мониторинга серверов. Работа была высоко оценена.</p>
+        <p>В прошлом году защитил диплом бакалавра на тему программного комплекса для мониторинга серверов. Работа была
+          высоко оценена.</p>
         <p>Сейчас я работаю инженером в Центре управления полётами.</p>
       </section>
 
       <section class="skills" id="skills">
         <h2 class="skills__title">Мои навыки</h2>
         <div class="skills__sort">
+          <span class="skills__label">Сортировать</span>
           <button class="skills__button">по названию</button>
           <button class="skills__button">по уровню</button>
         </div>
         <dl class="skills__list">
-          <dt class="skills__item skills__item--html">html</dt>
-          <dd class="skills__bar"><div style="width: 30%;"></div></dd>
-          <dt class="skills__item skills__item--css">css</dt>
-          <dd class="skills__bar"><div style="width: 10%;"></div></dd>
-          <dt class="skills__item skills__item--python">python</dt>
-          <dd class="skills__bar"><div style="width: 45%;"></div></dd>
-          <dt class="skills__item skills__item--cpp">c++</dt>
-          <dd class="skills__bar"><div style="width: 50%;"></div></dd>
+          <dt class="skills__item skill-item skill-item--html">html</dt>
+          <dd class="skills__bar">
+            <div style="width: 30%;"></div>
+          </dd>
+
+          <dt class="skills__item skill-item skill-item--css">css</dt>
+          <dd class="skills__bar">
+            <div style="width: 10%;"></div>
+          </dd>
+
+          <dt class="skills__item skill-item skill-item--python">python</dt>
+          <dd class="skills__bar">
+            <div style="width: 45%;"></div>
+          </dd>
+
+          <dt class="skills__item skill-item skill-item--cpp">c++</dt>
+          <dd class="skills__bar">
+            <div style="width: 50%;"></div>
+          </dd>
         </dl>
       </section>
 
@@ -68,12 +85,18 @@
 
       <section class="contacts" id="contacts">
         <h2 class="contacts__title">Мои контакты</h2>
+        <ul class="contacts__list">
         <a href="tel:+79262300151" class="contacts__link contacts__link--phone">+7 926 230-01-51</a>
-        <a href="mailto:artem-bodrov1408@yandex.ru" class="contacts__link contacts__link--mail">artem-bodrov1408@yandex.ru</a>
-        <div class="contacts__socials">
-          <a href="https://github.com/Jubilee-E" class="contacts__social contacts__social--github"><span class="visually-hidden">GitHub</span></a>
-          <a href="https://vk.com/artembodrovrom" class="contacts__social contacts__social--vk"><span class="visually-hidden">VK</span></a>
-          <a href="https://t.me/BoArRom" class="contacts__social contacts__social--telegram"><span class="visually-hidden">Telegram</span></a>
+        <a href="mailto:artem-bodrov1408@yandex.ru"
+          class="contacts__link contacts__link--mail">artem-bodrov1408@yandex.ru</a>
+        </ul>
+          <div class="contacts__socials">
+          <a href="https://github.com/Jubilee-E" class="contacts__social contacts__social--github"><span
+              class="visually-hidden">GitHub</span></a>
+          <a href="https://vk.com/artembodrovrom" class="contacts__social contacts__social--vk"><span
+              class="visually-hidden">VK</span></a>
+          <a href="https://t.me/BoArRom" class="contacts__social contacts__social--telegram"><span
+              class="visually-hidden">Telegram</span></a>
         </div>
       </section>
     </main>
@@ -85,4 +108,5 @@
     </div>
   </footer>
 </body>
+
 </html>
