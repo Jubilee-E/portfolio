@@ -140,51 +140,51 @@ a:hover {
 }
 
 .skill-list {
-    margin: 0;
-    padding: 0;
-    line-height: 1;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
 }
 
 .skill-list dt {
-    margin-bottom: 6px;
-    padding: 5px 0 5px 38px;
-    background-position: left center;
-    background-repeat: no-repeat;
-    background-size: 30px;
+  margin-bottom: 6px;
+  padding: 5px 0 5px 38px;
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: 30px;
 }
 
 .skill-level {
-    margin: 4px 0 20px;
-    padding: 2px;
-    font-size: 0;
-    border: 1px solid var(--text-color);
-    border-radius: 16px;
+  margin: 4px 0 20px;
+  padding: 2px;
+  font-size: 0;
+  border: 1px solid var(--text-color);
+  border-radius: 16px;
 }
 
 .skill-item {
-    text-transform: lowercase;
+  text-transform: lowercase;
 }
 
 .skill-level div {
-    height: 14px;
-    background-color: var(--accent-color);
-    border-radius: 8px;
+  height: 14px;
+  background-color: var(--accent-color);
+  border-radius: 8px;
 }
 
 .skill-item_html {
-    background-image: url("../img/html.svg");
+  background-image: url("../img/html.svg");
 }
 
 .skill-item_css {
-    background-image: url("../img/css.svg");
+  background-image: url("../img/css.svg");
 }
 
 .skill-item_cpp {
-    background-image: url("../img/c++.svg");
+  background-image: url("../img/c++.svg");
 }
 
 .skill-item_python {
-    background-image: url("../img/python.svg");
+  background-image: url("../img/python.svg");
 }
 
 
@@ -212,15 +212,18 @@ a:hover {
 .contacts__link:hover {
   color: var(--accent-color);
 }
+
 .contacts__item {
-  list-style: none; 
-  margin-bottom: 10px; 
+  list-style: none;
+  margin-bottom: 10px;
 }
+
 .contacts__list {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
 }
+
 .contacts__socials {
   margin-top: 20px;
   display: flex;
