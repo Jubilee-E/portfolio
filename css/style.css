@@ -40,41 +40,14 @@ a:hover {
   color: var(--accent-color);
 }
 
-.about {
-  margin-bottom: 210px;
-}
-
-.about__title {
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 1.2;
-  margin: 0 0 30px 0;
-  text-align: left;
-  letter-spacing: -0.2px;
-}
-
-.about .text-wrapper {
-  max-width: 800px;
-  margin-left: 0;
-  padding-left: 0;
-  line-height: 1.5;
-}
-
-.text-wrapper p {
-  text-align: left;
-  margin-bottom: 15px;
-  padding-left: 0;
-}
-
-
-
+/* Container */
 .container {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-
+/* Header */
 .header {
   margin-bottom: 120px;
 }
@@ -108,17 +81,14 @@ a:hover {
 
 .header__link:hover {
   color: var(--accent-color);
-  text-decoration: none;
 }
 
-
+/* Sections spacing */
 main > section {
   margin-bottom: 120px;
 }
 
-.interests {
-  margin-bottom: 225px; 
-}
+/* Intro Section */
 .intro {
   display: flex;
   align-items: flex-start;
@@ -153,18 +123,20 @@ main > section {
   flex-shrink: 0;
 }
 
-
-.about__title, 
-.skills__title, 
-.interests__title, 
-.contacts__title {
+/* About Section */
+.about__title {
   font-size: 30px;
-  line-height: 1.2;
   font-weight: 700;
-  margin-top: 0;
-  margin-bottom: 40px;
+  line-height: 1.2;
+  margin: 0 0 30px;
+  text-align: left;
+  letter-spacing: -0.2px;
 }
 
+.text-wrapper {
+  max-width: 800px;
+  line-height: 1.5;
+}
 
 .text-wrapper p {
   margin-bottom: 15px;
@@ -174,12 +146,19 @@ main > section {
   margin-bottom: 0;
 }
 
-
+/* Skills Section */
 .skills__header {
   display: flex;
   justify-content: space-between;
-  align-items: baseline; 
-  margin-bottom: 0px;
+  align-items: baseline;
+  margin-bottom: 36px;
+}
+
+.skills__title {
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 700;
+  margin: 0;
 }
 
 .skills__sort {
@@ -190,15 +169,20 @@ main > section {
   color: var(--text-color);
 }
 
+.skills__label {
+  font-size: 20px;
+}
+
 .skills__button {
- background-color: transparent;
-  padding: 8px 14px; 
+  background-color: transparent;
+  padding: 8px 14px;
   border: 1px solid var(--accent-color);
   font-size: 18px;
-  border-radius: 6px; 
+  border-radius: 6px;
   cursor: pointer;
   color: var(--accent-color);
-  transition: background-color 0.3s ease, color 0.3s ease;}
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 
 .skills__button:hover {
   background-color: var(--accent-color);
@@ -206,35 +190,35 @@ main > section {
 }
 
 .skill-list {
-  margin: 0;
+  margin: 30;
   padding: 0;
   line-height: 1;
 }
 
 .skill-list dt {
-  margin-bottom: 4px;
-  padding: 5px 0 5px 38px;
+  margin-bottom: 8px;
+  padding: 6px 0 5px 38px;
   background-position: left center;
   background-repeat: no-repeat;
   background-size: 30px;
 }
 
 .skill-level {
-margin: 4px 0 20px;
+  margin: 4px 0 14px;
   padding: 2px;
   font-size: 0;
   border: 1px solid var(--text-color);
-  border-radius: 24px; 
-}
-
-.skill-item {
-  text-transform: lowercase;
+  border-radius: 24px;
 }
 
 .skill-level div {
   height: 14px;
   background-color: var(--accent-color);
-  border-radius: 24px; 
+  border-radius: 24px;
+}
+
+.skill-item {
+  text-transform: lowercase;
 }
 
 .skill-item_html {
@@ -253,14 +237,48 @@ margin: 4px 0 20px;
   background-image: url("../img/python.svg");
 }
 
+/* Interests Section */
+.interests__title {
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 700;
+  margin: 0 0 40px;
+}
 
+.interests .text-wrapper p {
+  margin-bottom: 15px;
+}
+
+/* Contacts Section */
+.contacts__title {
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 700;
+  margin: 0 0 40px;
+}
+
+.contacts__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts__list {
+  display: flex;
+  gap: 40px; 
+  list-style: none;
+  margin: 0 0 30px;
+  padding: 0;
+}
+
+.contacts__item {
+  margin: 0;
+}
 
 .contacts__link {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  margin: 6px 20px 20px 0;
-  padding-left: 45px;
+  padding: 8px 2px 12px 40px; 
   background-repeat: no-repeat;
   background-position: left center;
   background-size: 28px;
@@ -280,22 +298,9 @@ margin: 4px 0 20px;
   color: var(--accent-color);
 }
 
-.contacts__item {
-  list-style: none;
-  margin-bottom: -8px;
-}
-
-.contacts__list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-bottom: 30px;
-}
-
 .contacts__socials {
   display: flex;
-  gap: 24px;
-  flex-wrap: wrap;
+  gap: 22px;
 }
 
 .contacts__social {
@@ -335,11 +340,11 @@ margin: 4px 0 20px;
   white-space: nowrap;
 }
 
-
+/* Footer */
 .footer {
+  width: 100%;
   padding: 55px 0;
   background-color: #1d1d1f;
-  
 }
 
 .footer__text {
