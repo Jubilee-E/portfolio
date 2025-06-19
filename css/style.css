@@ -128,7 +128,7 @@ main > section {
   font-size: 30px;
   font-weight: 700;
   line-height: 1.2;
-  margin: 0 0 40px;
+  margin: 0 0 30px;
   text-align: left;
   letter-spacing: -0.2px;
 }
@@ -151,7 +151,7 @@ main > section {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: 36px;
+  margin-bottom: 0;
 }
 
 .skills__title {
@@ -190,21 +190,21 @@ main > section {
 }
 
 .skill-list {
-  margin: 30;
+  margin: 0;
   padding: 0;
   line-height: 1;
 }
 
 .skill-list dt {
-  margin-bottom: 8px;
-  padding: 6px 0 5px 38px;
+  margin-bottom: 4px;
+  padding: 5px 0 5px 38px;
   background-position: left center;
   background-repeat: no-repeat;
   background-size: 30px;
 }
 
 .skill-level {
-  margin: 4px 0 14px;
+  margin: 4px 0 20px;
   padding: 2px;
   font-size: 0;
   border: 1px solid var(--text-color);
@@ -278,7 +278,7 @@ main > section {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 8px 2px 12px 40px; 
+  padding: 8px 0 8px 40px; 
   background-repeat: no-repeat;
   background-position: left center;
   background-size: 28px;
@@ -300,7 +300,7 @@ main > section {
 
 .contacts__socials {
   display: flex;
-  gap: 22px;
+  gap: 24px;
 }
 
 .contacts__social {
@@ -351,4 +351,137 @@ main > section {
   font-size: 20px;
   color: #777;
   margin: 0;
+}
+
+
+/* === Адаптивные медиазапросы === */
+
+/* Планшет */
+@media screen and (max-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+  .intro__photo {
+    width: 300px;
+    height: 300px;
+  }
+  h2 {
+    font-size: 28px;
+  }
+  .text-wrapper p {
+    font-size: 18px;
+  }
+  .skills__button,
+  .header__link,
+  .skills__label,
+  .contacts__link {
+    font-size: 18px;
+  }
+
+  /* Пункт 14 */
+  main > section {
+    margin-bottom: 80px;
+  }
+}
+
+/* Мобильный */
+@media screen and (max-width: 650px) {
+  body {
+    font-size: 14px;
+  }
+  .intro__title           { font-size: 40px; }
+  .intro__subtitle        { font-size: 28px; }
+  .header__link,
+  .skills__label,
+  .contacts__link         { font-size: 16px; }
+  .skills__button         { font-size: 14px; }
+  h2                      { font-size: 24px; margin-bottom: 20px; }
+  .text-wrapper p         { font-size: 16px; }
+  main > section          { margin-bottom: 50px; }
+
+  /* Шапка */
+  .header__wrapper {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    gap: 20px;
+  }
+  .header__logo {
+    width: 40px;
+    height: 40px;
+  }
+  .header__nav {
+    display: none;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .header__link {
+    width: 100%;
+    text-align: center;
+    padding: 8px 0;
+  }
+  .header__toggle {
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-image: url("../img/burger.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  .header--open .header__nav {
+    display: flex;
+  }
+  .header--open .header__toggle {
+    background-image: url("../img/close.svg");
+  }
+
+  /* Блок Intro */
+  .intro {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 80px;
+  }
+  .intro__text  { text-align: center; }
+  .intro__photo { width: 200px; height: 200px; }
+
+  /* Навыки */
+  .skills__header {
+    margin-bottom: 20px;
+  }
+
+  /* Контакты */
+  .contacts__title {
+    margin-bottom: 20px;
+  }
+  .contacts__list {
+    margin-bottom: 20px;
+  }
+  .contacts__link {
+    padding: 12px 0 12px 48px;
+  }
+
+  /* Футер */
+  .footer {
+    padding: 40px 0;
+  }
+  .footer__text {
+    font-size: 16px;
+  }
+}
+
+/* Мобильный 2 */
+@media screen and (max-width: 360px) {
+  .contacts__list {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .contacts__socials {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
 }
