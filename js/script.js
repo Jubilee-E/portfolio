@@ -1,7 +1,5 @@
 'use strict';
 
-console.log('script.js подключен');
-
 const skills = {
   data: [
     {
@@ -32,7 +30,7 @@ const skills = {
       const dt = document.createElement("dt");
       dt.classList.add("skill-item");
       dt.textContent = skill.title;
-      dt.style.backgroundImage = `url(../img/${skill.icon})`;
+      dt.style.backgroundImage = `url(img/${skill.icon})`;
 
       const dd = document.createElement("dd");
       dd.classList.add("skill-level");
@@ -41,9 +39,8 @@ const skills = {
       div.textContent = `${skill.level}%`;
       div.style.width = skill.level + "%";
 
-      dd.appendChild(div);
-      parentElement.appendChild(dt);
-      parentElement.appendChild(dd);
+      dd.append(div);
+      parentElement.append(dt, dd);
     });
   }
 };
