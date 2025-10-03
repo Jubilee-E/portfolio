@@ -403,6 +403,10 @@ section, .main-header {
         text-align: center;
     }
 
+    .main-nav_closed {
+        display: none;
+     }
+
     .main-header img {
         width: 40px;
         height: 40px;
