@@ -419,6 +419,12 @@ section, .main-header {
         border: 0px;
     }
     
+    .nav-btn:hover,
+    .nav-btn:active {
+        background-color: transparent;
+    }
+
+    
     .nav-btn_close{
         background-image: url("../img/close.svg");
     }
