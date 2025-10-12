@@ -41,10 +41,8 @@ const skills = {
 
   
   sortList(type) {
-    const prop = (type === 'name') ? 'title' : type; 
-
     if (this.sortMode !== type) {
-      this.data.sort(getComparer(prop));
+      this.data.sort(getComparer(type));
       this.sortMode = type;
     } else {
       this.data.reverse();
@@ -72,14 +70,9 @@ const navMenu = document.querySelector(".main-nav");
 
 
 function getNavBtnLabel() {
-  let label = navBtn.querySelector('.visually-hidden');
-  if (!label) {
-    label = document.createElement('span');
-    label.classList.add('visually-hidden');
-    navBtn.append(label);
-  }
-  return label;
+  return navBtn.querySelector('.visually-hidden');
 }
+
 
 const menu = {
   open() {
