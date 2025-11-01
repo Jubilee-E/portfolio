@@ -1,5 +1,6 @@
 'use strict';
 
+
 function getComparer(prop) {
   return function(a, b) {
     if (a[prop] > b[prop]) return 1;
@@ -7,6 +8,7 @@ function getComparer(prop) {
     return 0;
   };
 }
+
 
 const skills = {
   data: [
@@ -19,7 +21,7 @@ const skills = {
   sortMode: null, 
 
   generateList(parentElement) {
-    parentElement.innerHTML = ""; 
+    parentElement.innerHTML = "";
 
     this.data.forEach(skill => {
       const dt = document.createElement("dt");
@@ -39,7 +41,6 @@ const skills = {
     });
   },
 
-  
   sortList(type) {
     if (this.sortMode !== type) {
       this.data.sort(getComparer(type));
@@ -56,6 +57,7 @@ const skills = {
 const skillList = document.querySelector(".skill-list");
 skills.generateList(skillList);
 
+
 const sortBlock = document.querySelector(".skills-sort");
 sortBlock.addEventListener("click", function(event) {
   if (event.target && event.target.nodeName === "BUTTON") {
@@ -64,23 +66,16 @@ sortBlock.addEventListener("click", function(event) {
   }
 });
 
-
 const navBtn = document.querySelector(".nav-btn");
 const navMenu = document.querySelector(".main-nav");
-
-
-function getNavBtnLabel() {
-  return navBtn.querySelector('.visually-hidden');
-}
-
+const navBtnLabel = navBtn.querySelector(".visually-hidden");
 
 const menu = {
   open() {
     navMenu.classList.remove("main-nav_closed");
     navBtn.classList.remove("nav-btn_open");
     navBtn.classList.add("nav-btn_close");
-    
-    getNavBtnLabel().textContent = "Закрыть меню";
+    navBtnLabel.textContent = "Закрыть меню";
     navBtn.setAttribute('aria-expanded', 'true');
   },
 
@@ -88,7 +83,7 @@ const menu = {
     navMenu.classList.add("main-nav_closed");
     navBtn.classList.remove("nav-btn_close");
     navBtn.classList.add("nav-btn_open");
-    getNavBtnLabel().textContent = "Открыть меню";
+    navBtnLabel.textContent = "Открыть меню";
     navBtn.setAttribute('aria-expanded', 'false');
   }
 };
@@ -102,5 +97,29 @@ navBtn.addEventListener("click", function() {
     menu.open();
   } else {
     menu.close();
+  }
+});
+
+const themeSwitch = document.querySelector('#switch');
+
+themeSwitch.checked = document.body.classList.contains('dark-theme');
+
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') {
+  document.body.classList.add('dark-theme');
+  themeSwitch.checked = true;
+} else {
+  document.body.classList.remove('dark-theme');
+  themeSwitch.checked = false;
+}
+
+
+themeSwitch.addEventListener('change', function() {
+  if (this.checked) {
+    document.body.classList.add('dark-theme');
+    localStorage.setItem('theme', 'dark'); 
+  } else {
+    document.body.classList.remove('dark-theme');
+    localStorage.setItem('theme', 'light');
   }
 });
