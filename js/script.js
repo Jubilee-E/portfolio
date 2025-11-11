@@ -11,12 +11,49 @@ function getComparer(prop) {
 
 
 const skills = {
-  data: [
-    { title: "html",  level: 30, icon: "html.svg" },
-    { title: "css",   level: 10, icon: "css.svg" },
-    { title: "python",level: 45, icon: "python.svg" },
-    { title: "c++",   level: 50, icon: "c++.svg" }
-  ],
+  data: [],
+
+getData(path) {
+  const sectionSkills = document.querySelector(".section-skills");
+  const sortButtons = document.querySelectorAll(".skills-sort button");
+
+  sortButtons.forEach(btn => btn.disabled = true);
+
+  fetch(path)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Ошибка загрузки: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then(data => {
+      this.data = data;
+      this.generateList(skillList);
+
+      sortButtons.forEach(btn => btn.disabled = false);
+    })
+    .catch(error => {
+  console.error('Не удалось загрузить список навыков:', error);
+
+  const errorMessage = document.createElement("div");
+  errorMessage.classList.add("skills-error");
+  errorMessage.innerHTML = `
+    <p>Не удалось загрузить список навыков.<br>
+    Проверьте путь к файлу или соединение с сервером.</p>
+    <button type="button" class="retry-btn">Повторить</button>
+  `;
+  sectionSkills.append(errorMessage);
+
+  const retryButton = errorMessage.querySelector(".retry-btn");
+  retryButton.addEventListener("click", () => {
+    errorMessage.remove(); 
+    this.getData(path);
+  });
+});
+
+},
+
+
 
   sortMode: null, 
 
@@ -123,3 +160,5 @@ themeSwitch.addEventListener('change', function() {
     localStorage.setItem('theme', 'light');
   }
 });
+
+skills.getData('db/skills.json');
