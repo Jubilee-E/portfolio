@@ -15,10 +15,10 @@ const skills = {
   section: null,
   sortMode: null,
 
-  init() {
-    this.list = document.querySelector(".skill-list");
-    this.sortButtons = document.querySelectorAll(".skills-sort button");
-    this.section = document.querySelector(".section-skills");
+  init(listElement, sortButtons, sectionElement) {
+    this.list = listElement;
+    this.sortButtons = sortButtons;
+    this.section = sectionElement;
   },
 
   generateList() {
@@ -80,27 +80,25 @@ const skills = {
 
     fetch(path)
       .then((response) => {
-        if (!response.ok) {
-          throw new Error(`Ошибка загрузки: ${response.status}`);
-        }
+        if (!response.ok) throw new Error(`Ошибка загрузки: ${response.status}`);
         return response.json();
       })
       .then((data) => {
         if (!Array.isArray(data)) {
-          throw new Error("Неверный формат JSON: ожидался массив.");
+          throw new Error("Неверный формат JSON — ожидается массив.");
         }
 
         this.data = data;
         this.generateList();
-
         this.sortButtons.forEach((btn) => (btn.disabled = false));
       })
       .catch((error) => {
         console.error(error);
         this.showError("Не удалось загрузить список навыков.", path);
       });
-  },
+  }
 };
+
 
 
 document
@@ -170,6 +168,10 @@ if (themeSwitch) {
   });
 }
 
+const listElement = document.querySelector(".skill-list");
+const sortButtons = document.querySelectorAll(".skills-sort button");
+const sectionElement = document.querySelector(".section-skills");
 
-skills.init();
+skills.init(listElement, sortButtons, sectionElement);
 skills.getData("db/skills.json");
+
